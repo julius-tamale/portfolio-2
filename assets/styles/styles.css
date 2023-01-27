@@ -71,7 +71,12 @@ body {
 .span__logo {
     color: var(--primary-color-four);
 }
-.nav__logo:hover
+.nav__logo:hover {
+    color: var(--primary-color-four);
+}
+.span__logo:hover {
+    color: var(--primary-color-one);
+}
 .nav__name {
     font-weight: 500;
 }
@@ -94,5 +99,58 @@ body {
 }
 .nav__link:hover {
     color: var(--primary-color-four);
+}
+.nav__icon {
+    display: none;
+}
+.active__link {
+    position: relative;
+}
+@media screen and (min-width: 769px ){
+    .active__link::before {
+        content: '';
+        position: absolute;
+        bottom: -0.4rem;
+        width: 2.5rem;
+        height: 3px;
+        border-radius: 3px;
+        background-color: var(--primary-color-four);
+    }
+}
+img {
+    display: none;
+}
+@media screen and ( max-width: 992px ){
+    .container {
+        padding: 0 1rem;
+    }
+}
+@media screen and ( max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color-two);
+        width: 100%;
+        height: 4rem;
+        padding: 0 1rem;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        box-shadow: 0 -1px 12px rgba(255, 222, 89, 0.25);
+    }
+    .nav__icon {
+        display: block;
+    }
+    .nav__logo {
+        margin: 0 auto;
+    }
+}
+
+@media screen and ( min-width: 576px ) {
+    .nav__list {
+        justify-content: center;
+    }
 }
 /* ============================= Nav bar styles end ========================= */
