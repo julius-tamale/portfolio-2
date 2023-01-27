@@ -20,9 +20,9 @@ input, button {
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 5px;
-}
+}*/
 html {
     scroll-behavior: smooth;
 }
@@ -54,6 +54,7 @@ body {
     background-color: var(--primary-color-two);
     z-index: 999;
     transition: 0.4s;
+    /*padding: 0 1.5rem;*/
 }
 
 /* ============================= Nav bar styles start ======================= */
@@ -100,11 +101,15 @@ body {
 .nav__link:hover {
     color: var(--primary-color-four);
 }
+.nav__link:active {
+    color: red/*var(--primary-color-four)*/;
+}
 .nav__icon {
     display: none;
 }
 .active__link {
     position: relative;
+    color: var(--primary-color-four);
 }
 @media screen and (min-width: 769px ){
     .active__link::before {
@@ -116,10 +121,21 @@ body {
         border-radius: 3px;
         background-color: var(--primary-color-four);
     }
+    /*.active__link:active::before {
+        background-color: var(--primary-color-four);
+    }
+    .active__link::before, a:focus::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+    }*/
+    .header-con {
+        padding: 0 4.5rem;
+        font-size: 1.5rem;
+    }
 }
-img {
+/*img {
     display: none;
-}
+}*/
 @media screen and ( max-width: 992px ){
     .container {
         padding: 0 1rem;
@@ -152,5 +168,9 @@ img {
     .nav__list {
         justify-content: center;
     }
+}
+
+section {
+    height: 100vh;
 }
 /* ============================= Nav bar styles end ========================= */
