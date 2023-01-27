@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
 :root {
-    --primary-color-one: hsl(120, 100%, 30%);
+    --primary-color-one: hsl(0, 4%, 5%);
     --primary-color-two: hsl(0, 0%, 0%);
     --primary-color-three: hsl(0, 70%, 100%);
     --primary-color-four: hsl(48, 100%, 67%);
@@ -42,9 +42,10 @@ body {
 }
 .section__title {
     font-size: 2.5rem;
-    color: var(--primary-color-one);
+    color: var(--primary-color-three);
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
+    font-variant: small-caps;
 }
 .header-con {
     position: fixed;
@@ -54,7 +55,6 @@ body {
     background-color: var(--primary-color-two);
     z-index: 999;
     transition: 0.4s;
-    /*padding: 0 1.5rem;*/
 }
 
 /* ============================= Nav bar styles start ======================= */
@@ -66,7 +66,7 @@ body {
 }
 .nav__logo {
     font-weight: 700;
-    color: var(--primary-color-one);
+    color: var(--primary-color-three);
     font-size: 1.75rem;
 }
 .span__logo {
@@ -95,15 +95,15 @@ body {
 .nav__link {
     flex-direction: column;
     align-items: center;
-    color: var(--primary-color-one);
+    color: var(--primary-color-three);
     row-gap: 0.25rem;
 }
 .nav__link:hover {
     color: var(--primary-color-four);
 }
-.nav__link:active {
-    color: red/*var(--primary-color-four)*/;
-}
+/*.nav__link:active {
+    color: red;
+}*/
 .nav__icon {
     display: none;
 }
@@ -111,6 +111,87 @@ body {
     position: relative;
     color: var(--primary-color-four);
 }
+.main-container {
+    position: relative;
+    top: 4.5rem;
+}
+.hero-section {
+    background-color: var(--primary-color-two);
+    color: var(--primary-color-three);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-social-links {
+    display: flex;
+    column-gap: 1.5rem;
+    margin-top: 2rem;
+}
+.f1-head {
+    margin-top: 2rem;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+h3 {
+    font-size: 1.4rem;
+}
+.so-link {
+    color: var(--primary-color-three);
+    font-size: 2rem;
+}
+.hero-d1 > img {
+    width: 15rem;
+    border: 2px solid var(--primary-color-three);
+    border-radius: 50%;
+    padding: 5px;
+}
+.about-me-section {
+    background-color: var(--primary-color-one);
+    height: 60vh;
+    /*padding-top: 4.5rem;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-me {
+    width: 80%;
+    max-width: 500px;
+}
+.about-me p {
+    color: var(--primary-color-three);
+    margin-bottom: 1.75rem;
+}
+.about-me p > a {
+    color: var(--primary-color-four);
+    text-decoration: underline wavy;
+}
+.my-projects-sect {
+    background-color: var(--primary-color-two);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.under {
+    border-bottom: 3px solid var(--primary-color-four);
+    display: inline-block;
+    padding-top: 5px;
+}
+.contact-me-sect {
+    background-color: var(--primary-color-one);
+    color: var(--primary-color-three);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*.footer-sect {
+    background-color: var(--primary-color-two);
+    color: var(--primary-color-four);
+}*/
 @media screen and (min-width: 769px ){
     .active__link::before {
         content: '';
