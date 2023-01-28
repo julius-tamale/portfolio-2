@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
 :root {
     --primary-color-one: hsl(0, 4%, 5%);
@@ -7,7 +7,7 @@
     --primary-color-four: hsl(48, 100%, 67%);
 }
 /* ====================== Styles reset start ======================== */
-*, *::before, *::after {
+/*, *::before, *::after {
     box-sizing: border-box;
 }
 * {
@@ -23,7 +23,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /*::-webkit-scrollbar {
     width: 5px;
 }*/
-html {
+/*html {
     scroll-behavior: smooth;
 }
 
@@ -36,7 +36,7 @@ a {
 }
 /* ====================== Styles reset end ======================== */
 
-body {
+/*body {
     font-family: 'Roboto', sans-serif;
 
 }
@@ -57,7 +57,7 @@ body {
     transition: 0.4s;
 }
 
-/* ============================= Nav bar styles start ======================= */
+/* ============================= Nav bar styles start ======================= 
 .nav {
     height: 4.5rem;
     display: flex;
@@ -103,7 +103,7 @@ body {
 }
 /*.nav__link:active {
     color: red;
-}*/
+}
 .nav__icon {
     display: none;
 }
@@ -152,7 +152,7 @@ h3 {
     background-color: var(--primary-color-one);
     height: 60vh;
     /*padding-top: 4.5rem;*/
-    display: flex;
+/*    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -191,7 +191,7 @@ h3 {
 /*.footer-sect {
     background-color: var(--primary-color-two);
     color: var(--primary-color-four);
-}*/
+}
 @media screen and (min-width: 769px ){
     .active__link::before {
         content: '';
@@ -208,7 +208,7 @@ h3 {
     .active__link::before, a:focus::before {
         transform-origin: left top;
         transform: scale(1, 1);
-    }*/
+    }
     .header-con {
         padding: 0 4.5rem;
         font-size: 1.5rem;
@@ -216,7 +216,7 @@ h3 {
 }
 /*img {
     display: none;
-}*/
+}
 @media screen and ( max-width: 992px ){
     .container {
         padding: 0 1rem;

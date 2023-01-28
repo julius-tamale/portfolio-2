@@ -1,4 +1,4 @@
-const sections = document.querySelectorAll('section');
+/*const sections = document.querySelectorAll('section');
 
 function scrollActive() {
     const scrollY = window.pageYOffset;
@@ -19,4 +19,4 @@ function scrollActive() {
     });
 }
 
-window.addEventListener('scroll', scrollActive);
+window.addEventListener('scroll', scrollActive);*/
