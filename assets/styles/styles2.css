@@ -142,6 +142,8 @@ h3 {
 .hero-social-links {
     margin: 4rem 0 0;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
 } 
 .hero-social-links > a {
     display: inline-block;
