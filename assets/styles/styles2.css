@@ -1,7 +1,314 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;700&display=swap');
 
 :root {
-    --color-one: hsl(0, 0, 0);
-    --color-two: hsl(0, 10%, 15%);
-    --color-three: hsl(48, 100%, 67%);
+    --color-one: hsl(0, 0%, 0%);
+    --color-two: hsl(210, 7%, 5%);
+    --color-three: #03e9f4;
+    --color-four: hsl(0, 100%, 100%);
+    --font-f: 'Markazi Text', serif;
 }
+
+/* ==================== General styles reset start ============================= */
+
+*, *::before, *::before {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+input, button {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: var(--font-f);
+}
+/* ==================== General styles reset end ============================= */
+
+/* ======== Mobile, iPads and Landscape styles start ==========================*/
+    /* ================ 1. Navigation menu styles start =================== */
+
+.header-con {
+    background-color: var(--color-one);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*padding: 0 1.5rem;*/
+}
+.nav {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo {
+    font-weight: 600;
+    color: var(--color-four);
+    font-size: 3rem;
+    margin: 0 auto;
+}
+.span__logo {
+    color: var(--color-three);
+}
+.nav__logo:hover {
+    color: var(--color-three);
+}
+.span__logo:hover {
+    color: var(--color-four);
+}
+.nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color-one);
+    border-radius: 1.25rem 1.25rem 0 0;
+    box-shadow: 0 -1px 12px #03e9f4;
+}
+.nav__list,
+.nav__link {
+    display: flex;
+}
+.nav__list {
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav__link {
+    font-size: 1.25rem;
+    flex-direction: column;
+    color: var(--color-four);
+}
+.active__link {
+    color: var(--color-three);
+}
+
+/* =================  2. hero section layout ===================== */
+section {
+    color: var(--color-four);
+}
+.black-sect {
+    background-color: var(--color-one);
+}
+.l-black-sect {
+    background: var(--color-two);
+}
+.hero__section {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-d1 > img {
+    display: block;
+    width: 15rem;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid var(--color-four);
+    margin-bottom: 2.5rem;
+}
+h3, h1 {
+    text-align: center;
+}
+h1 {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.8;
+}
+.under {
+    border-bottom: 2px solid var(--color-three);
+}
+h3 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.hero-social-links {
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    column-gap: 1.25rem;
+} 
+.hero-social-links > a {
+    color: var(--color-three);
+}
+.section__title {
+    text-align: center;
+    font-size: 2em;
+    font-variant: small-caps;
+    padding-bottom: 1.75rem;
+}
+.about-me-section {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    /*text-align: justify;*/
+    padding: 0 2.5rem;
+}
+.about-me div > p {
+    margin-bottom: 1rem;
+}
+/* =============== Mobile, iPads and Landscape styles end =====================*/
+
+.contact-me-sect {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.form-con {
+  width: 80%;
+  padding: 40px;
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+.user-box {
+    position: relative;
+}
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+form .sub {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+  
+.sub:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+  
+.sub span {
+    position: absolute;
+    display: block;
+}
+  
+.sub span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+  
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+}
+  
+.sub span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+  
+@keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+}
+  
+.sub span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+  
+@keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+}
+.sub span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+  
+@keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+}
+  
